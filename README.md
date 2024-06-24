@@ -7,15 +7,6 @@
 #### Run tests:
 ./gradlew test
 
-Postman collection in project root.
-
 
 #### Documentation
-
-SWAGGER: http://localhost:8080/api/swagger-ui/#/
-
-
-
-#### Documentacion
-
 SWAGGER: http://localhost:8080/api/swagger-ui/#/
