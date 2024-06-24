@@ -1,5 +1,6 @@
 package app.notification.controller;
 
+import app.notification.exception.cases.InvalidParameterException;
 import app.notification.model.inout.request.NotificationRequest;
 import app.notification.service.ports.NotificationService;
 import io.swagger.annotations.Api;
@@ -23,8 +24,8 @@ public class NotificationController {
     @Autowired
     NotificationService notificationService;
 
-    @PostMapping
-    public ResponseEntity<?> create(@Valid @RequestBody NotificationRequest notificationRequest) {
+    @PostMapping("/send")
+    public ResponseEntity<?> send(@Valid @RequestBody NotificationRequest notificationRequest) throws InvalidParameterException {
         notificationService.send(
                 notificationRequest.getType(),
                 notificationRequest.getMessage(),

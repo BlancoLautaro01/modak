@@ -41,14 +41,4 @@ public class User {
     @Email(message = "Invalid email")
     private String email;
 
-    @Column(nullable = false)
-    @Length(min = 10, max = 30, message = "The address must have a minimum of 10 and a maximum of 30 characters")
-    private String address;
-
-    @Column(nullable = false)
-    private Double lat;
-
-    @Column(nullable = false)
-    private Double lon;
-
 }

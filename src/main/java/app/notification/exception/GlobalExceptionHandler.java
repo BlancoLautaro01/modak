@@ -19,6 +19,12 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler({ InvalidParameterException.class })
+    public ResponseEntity<ApiError> handleInvalidType(InvalidParameterException ex) {
+        ApiError error = new ApiError(HttpStatus.BAD_REQUEST, ex.getMessage());
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+
     @ExceptionHandler({ DataIntegrityViolationException.class })
     public ResponseEntity<ApiError> handleDataIntegtityException(DataIntegrityViolationException ex) {
         ApiError error = new ApiError(

@@ -33,10 +33,7 @@ public class UserServiceImpl implements UserService {
             userRequest.getName(),
             userRequest.getSurname(),
             userRequest.getPassword(),
-            userRequest.getEmail(),
-            userRequest.getAddress(),
-            userRequest.getLat(),
-            userRequest.getLon()
+            userRequest.getEmail()
         );
 
         return userRepository.save(user);

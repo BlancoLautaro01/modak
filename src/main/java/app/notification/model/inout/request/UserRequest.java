@@ -13,7 +13,4 @@ public class UserRequest {
     private String surname;
     private String password;
     private String email;
-    private String address;
-    private Double lat;
-    private Double lon;
 }
